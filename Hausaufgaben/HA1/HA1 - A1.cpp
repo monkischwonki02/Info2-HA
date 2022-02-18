@@ -38,9 +38,14 @@ int main() {
 
     double s = (double)k / n;
     double pi = 4 * s;
-    std::cout << k << std::endl;
-    std::cout << s << std::endl;
     std::cout << pi << std::endl;
+
+    // Delete Array
+    for (int i = 0; i < n; i++){
+        delete[] points[i];
+    }
+    delete points;
+    points = nullptr;
 
     return 0;
 }
