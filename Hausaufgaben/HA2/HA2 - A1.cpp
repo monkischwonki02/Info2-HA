@@ -8,8 +8,8 @@ struct QuadEquation{
     double a;
     double b;
     double c;
-    double* lsg;
-    int lsgAnzahl;
+    double* lsg = nullptr;
+    int lsgAnzahl = 0;
 };
 
 void solveQuad(QuadEquation& q){
@@ -39,7 +39,7 @@ void printQuad(QuadEquation& q){
 }
 
 int main(){
-    QuadEquation q = {1,1,1,nullptr,0};
+    QuadEquation q = {1,1,1};
     solveQuad(q);
     printQuad(q);
     return 0;
