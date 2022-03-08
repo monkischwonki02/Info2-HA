@@ -1,6 +1,3 @@
-// Name: Adrian Hammermeister
-// Studiengang: Physik
-// Matrikelnr.: 221200260
 #include <iostream>
 int main(){
 

@@ -1,10 +1,8 @@
-// Name: Adrian Hammermeister
-// Studiengang: Physik
-// Matrikelnr.: 221200260
 #include <iostream> 
 #include <iomanip> 
 #include <ctime> 
 using namespace std; 
+
 int main() { 
     long c; const int n = 150; time_t t; 
     cout << "Two nested loops O(n^2)" << endl; 
