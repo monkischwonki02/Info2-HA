@@ -46,7 +46,19 @@ void freeQuad(QuadEquation& q){
 }
 
 int main(){
-    QuadEquation q = {100, 20, 1};
+    double a = 0;
+    double b,c;
+    while (a == 0){
+        std::cout << "Bitte geben Sie eine Zahl fuer 'a' ein: ";
+        std::cin >> a;
+        if (a == 0) std::cout << "Bitte eine Zahl ungleich 0 fuer 'a' eingeben!" << std::endl;
+    }
+    std::cout << "Bitte geben Sie eine Zahl fuer 'b' ein: ";
+    std::cin >> b;
+    std::cout << "Bitte geben Sie eine Zahl für 'c' ein: ";
+    std::cin >> c;
+
+    QuadEquation q = {a,b,c};
     solveQuad(q);
     printQuad(q);
     freeQuad(q);
