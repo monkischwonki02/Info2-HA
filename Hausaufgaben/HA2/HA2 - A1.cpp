@@ -1,3 +1,6 @@
+// Name: Adrian Hammermeister
+// Studiengang: Physik
+// Matrikelnr.: 221200260
 #include <iostream>
 #include <cmath>
 
@@ -14,7 +17,7 @@ void solveQuad(QuadEquation& q){
     if (D < 0){
         q.lsgAnzahl = 0;
     }
-    else if (D = 0){
+    else if (D == 0){
         q.lsgAnzahl = 1;
         q.lsg = new double(q.lsgAnzahl);
         q.lsg[0] = (double)- q.b / (2* q.a);
@@ -35,9 +38,17 @@ void printQuad(QuadEquation& q){
     }
 }
 
+
+// delete array with solutions
+void freeQuad(QuadEquation& q){
+    delete q.lsg;
+    q.lsg = nullptr;
+}
+
 int main(){
-    QuadEquation q = {1,1,1};
+    QuadEquation q = {100, 20, 1};
     solveQuad(q);
     printQuad(q);
+    freeQuad(q);
     return 0;
 }
