@@ -31,6 +31,8 @@ double** readMatrix(int m, int n) {
     return matrix;
 }
 
+// m : rows of matrix
+// n : coloumns of matrix
 void printMatrix(double** matrix, int m, int n) {
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
@@ -41,6 +43,8 @@ void printMatrix(double** matrix, int m, int n) {
 }
 
 // A2
+// m : rows of matrix
+// n : coloumns of matrix
 double** transposeMatrix(double** matrix, int m, int n) {
     double** matrixT = allocateMatrix(n, m);
     for (int i = 0; i < m; i++) {
@@ -51,6 +55,9 @@ double** transposeMatrix(double** matrix, int m, int n) {
     return matrixT;
 }
 
+// m : rows of A
+// n : coloumns of A
+// p : coloumns of B
 double** multiplyMatrices(double** A, double** B, int m, int n, int p) {
     double mul = 0;
     double** C = allocateMatrix(m, p);
