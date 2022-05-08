@@ -1,3 +1,6 @@
+//Name: Adrian Hammermeister
+// Studiengang: Physik (Bachelor)
+// Matrikelnr.: 221200260
 #include <iostream>
 
 // Data structures
@@ -114,9 +117,7 @@ void split(LinkedList* l, int v, LinkedList** a, LinkedList** b) {
 			insert(*a, end(*a), d->data);
 		} // O(n), da insert O(n) und man m mal die Schleife durchgeht (m*n = O(n))
 		for (Element* e = c; e != end(l); e = e->next) {
-			if (e != nullptr) {
-				insert(*b, end(*b), e->data);
-			}
+			insert(*b, end(*b), e->data);
 		} // O(n), da Insert O(n) und man (n-m) mal die Schleife durchgeht ((n-m)*n = O(n))
 	}
 }
