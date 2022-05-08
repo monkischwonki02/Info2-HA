@@ -125,20 +125,20 @@ void split(LinkedList* l, int v, LinkedList** a, LinkedList** b) {
 
 
 // A2
+// A2
 void merge(LinkedList* a, LinkedList* b, LinkedList** l) {
-
-	while (begin(a) != end(a)) {
-		insert(*l, end(*l), begin(a)->data); // O(n)
-		remove(a, begin(a)); // O(1)
-	}
+	(*l)->head = a->head; // O(1)
+	a->head = nullptr; // O(1)
 	
-	while (begin(b) != end(b)) {
-		insert(*l, end(*l), begin(b)->data); // O(n)
-		remove(b, begin(b)); // O(1)
-	}
+	Element* c = (*l)->head; // O(1)
+	while(c->next != nullptr){
+		c = c->next;
+	} // O(n)
+	c->next = b->head; // O(1)
+	b->head = nullptr; // O(1)
 }
-// Zeitaufwand: best-case O(n²) Begründung: remove - O(1), insert - O(n), while1 - k, while2 - (n-k) : k*n + (n-k)*n = n²
-//				worst-case O(n²) Begründung: remove - O(1), insert - O(n), while1 - k, while2 - (n-k) : k*n + (n-k)*n = n²
+// Zeitaufwand: best-case O(1), wenn Liste a genau ein Element hat, da O(n) für die while-Schleife zu O(1) wird
+//				worst-case O(n), wenn Liste a n-Werte (n != 1) hat.
 
 
 int main() {
