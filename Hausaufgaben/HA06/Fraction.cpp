@@ -36,9 +36,7 @@ void Fraction::setNumerator(int z){
 }
 
 // Calculations
-void Fraction::add(Fraction& b){
-    
-    
+void Fraction::add(Fraction& b){  
     this->setNumerator((this->getNumerator()*b.getDenominator()) + (this->getDenominator()*b.getNumerator()));
     this->setDenominator(this->getDenominator() * b.getDenominator());
 }
