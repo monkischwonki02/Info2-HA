@@ -6,7 +6,7 @@ class Fraction{
         int denominator;
     public:
         Fraction(int numerator, int denominator) {
-            if (denomitor != 0){
+            if (denominator != 0){
                 this->numerator = numerator;
                 this->denominator = denominator;
             } else {
